@@ -19,7 +19,7 @@ class Form extends CI_Model
         $data = array(
             'survey_id' => $survey_id,
             'form_order' => $form_order,
-            'name' => $name,
+            'name' => $name
         );
 
         $this->db->insert('form', $data);
