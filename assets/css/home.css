@@ -1,0 +1,267 @@
+/* Header CSS */
+#container {
+	display: flex;
+	justify-content: space-between;
+	font-family: "Montserrat";
+}
+
+ul {
+	list-style-type: none;
+}
+
+#sign-in,
+#navlinks li a,
+#navlinks li ul li a {
+	color: #300109;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+
+#navlinks li #logo {
+	font-size: 2rem;
+}
+
+#navlinks li {
+	float: left;
+	position: relative;
+	padding: 20px 20px;
+	line-height: 30px;
+}
+
+#navlinks li ul {
+	position: absolute;
+	display: none;
+}
+
+#navlinks li ul li {
+	width: 15rem;
+}
+
+#navlinks li ul li:hover {
+	background-color: #faf5f1;
+	display: block;
+}
+
+#navlinks li:hover ul {
+	display: block;
+}
+
+#logo {
+	font-size: 2rem;
+	line-height: 20px;
+}
+
+#sign-in {
+	margin-right: 100px;
+	padding: 20px 0;
+	font-size: 1.2rem;
+}
+
+/* Body CSS */
+#getStarted {
+	background-image: url("../images/home/cover_photo.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+
+#getStartedText {
+	font-family: "Montserrat";
+	font-weight: 700;
+	font-size: 2.5rem;
+	color: #300109;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: white;
+}
+
+.homeButton {
+	font-family: "Roboto";
+	font-weight: 400;
+	color: white;
+	background-color: #e7706a;
+	text-decoration: none;
+	border: none;
+	font-size: 1.2rem;
+	padding: 0.8rem 3rem;
+	cursor: pointer;
+}
+
+.homeButton:hover {
+	background-color: #da5952;
+}
+
+#getStartedButton button {
+	background-color: #e74037;
+}
+#getStartedButton button:hover {
+	background-color: #ee554d;
+}
+
+#createFormContainer,
+#answerFormContainer {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+#answerFormContainer {
+	justify-content: flex-start;
+}
+
+#createFormContent,
+#answerFormContent {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: #faf5f1;
+	width: 95%;
+	height: 70%;
+}
+
+#answerFormContent {
+	flex-direction: row-reverse;
+}
+
+#createFormText,
+#answerFormText {
+	width: 60rem;
+}
+
+#createFormTextHeader,
+#answerFormTextHeader {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+#createFormTextDescription {
+	font-size: 2.2rem;
+}
+
+#answerFormTextDescription {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+#createFormTextHeader,
+#createFormTextDescription,
+#answerFormTextHeader,
+#answerFormTextDescription,
+#dataReportsTextHeader,
+#dataReportsTextDescription {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+}
+
+#createFormTextReminder {
+	font-family: "Karla", sans-serif;
+	margin-bottom: 1.5rem;
+}
+
+#createFormImage img,
+#answerFormImage img {
+	width: 45rem;
+}
+
+#dataReportsContainer {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+#dataReportsContent {
+	width: 100%;
+	height: 70vh;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #faf5f1;
+}
+
+#dataReportsText {
+	width: 55rem;
+}
+
+#dataReportsTextHeader {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+#dataReportsTextDescription {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+/* Footer CSS */
+footer {
+	width: 100%;
+	background-color: #f8f0e9;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+footer section {
+	padding: 1%;
+}
+
+#footerDescription {
+	width: 20%;
+	padding: 1%;
+}
+
+#descriptionLogo img {
+	width: 250px;
+}
+
+#descriptionText {
+	margin-top: 10px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+}
+
+#footerDescription,
+#footerCompany {
+	flex-shrink: 4;
+}
+
+#companyLinks li,
+#legalLinks li {
+	margin-bottom: 1rem;
+}
+
+#companyLinks li a,
+#legalLinks li a {
+	font-family: "Montserrat", sans-serif;
+	color: black;
+	text-decoration: none;
+}
+
+#companyHeader,
+#legalHeader {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+}
+
+#footerSocmeds ul li {
+	float: left;
+	margin: 10px;
+}
+
+#copyright {
+	flex-basis: 100%;
+	width: 100%;
+	background-color: #d7d6c2;
+	font-family: "Robot", sans-serif;
+	font-weight: 100;
+	text-align: center;
+}

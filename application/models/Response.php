@@ -14,12 +14,12 @@ class Response extends CI_Model
         return $query->row();
     }
 
-    public function insertResponse($survey_id, $question_id, $respondent_ID, $answer)
+    public function insertResponse($survey_id, $question_id, $response_id, $answer)
     {
         $data = array(
             'survey_id' => $survey_id,
             'question_id' => $question_id,
-            'respondent_ID' => $repondent_ID,
+            'response_id' => $response_id,
             'answer' => $answer
         );
         $this->db->insert('response', $data);
