@@ -46,6 +46,7 @@
     </section>
 </footer>
 
+<script type="text/javascript" src="<?= base_url('assets/js/home/script.js') ?>"></script>
 </body>
 
 </html>

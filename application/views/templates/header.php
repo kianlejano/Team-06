@@ -25,5 +25,12 @@
             </li>
             <li><a href="#">DATA REPORTS</a></li>
         </ul>
-        <a href="#" id="sign-in">Sign in</a>
+        <?php
+        if (isset($login) == false) {
+            echo '<a href="#" id="sign-in">Sign in</a>';
+        } else {
+            echo '<h2 id="signed-in">', $first_name, ' ', $last_name, '</h2>';
+        }
+        ?>
+
     </nav>
