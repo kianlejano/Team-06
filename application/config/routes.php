@@ -54,4 +54,10 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['register'] = 'Pages/register';
+$route['register/verify'] = 'Pages/verifyRegister';
 $route['login'] = 'Pages/login';
+
+$route['myaccount'] = "Pages/myaccount";
+$route['myaccount/edit_profile'] = "Pages/editprofile";
+$route['myaccount/change_password'] = "Pages/changepassword";
+$route['myaccount/created_forms'] = "Pages/createdforms";
