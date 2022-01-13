@@ -35,7 +35,7 @@ class Surveyor extends CI_Model
         return (!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $str)) ? FALSE : TRUE;
     }
 
-    public function insertSurveyor($email, $last_name, $first_name, $age, $birthday, $gender, $password)
+    public function insertSurveyor($email, $first_name, $last_name, $birthday, $gender, $contact, $password)
     {
 
         if ($this->validate_email($email)) {
@@ -43,10 +43,11 @@ class Surveyor extends CI_Model
                 'email' => $email,
                 'last_name' => $last_name,
                 'first_name' => $first_name,
-                'age' => $age,
                 'birthday' => $birthday,
                 'gender' => $gender,
-                'password' => password_hash($password, PASSWORD_DEFAULT)
+                'contact' => $contact,
+                'password' => password_hash($password, PASSWORD_DEFAULT),
+                'activated' => '0'
             );
 
             $this->db->insert("surveyor", $data);

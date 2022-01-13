@@ -1,0 +1,60 @@
+/* Header CSS */
+#container {
+	display: flex;
+	justify-content: space-between;
+	font-family: "Montserrat";
+}
+
+ul {
+	list-style-type: none;
+}
+
+#sign-in,
+#signed-in,
+#navlinks li a,
+#navlinks li ul li a {
+	color: #300109;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+
+#navlinks li #logo {
+	font-size: 2rem;
+}
+
+#navlinks li {
+	float: left;
+	position: relative;
+	padding: 20px 20px;
+	line-height: 30px;
+}
+
+#navlinks li ul {
+	position: absolute;
+	display: none;
+}
+
+#navlinks li ul li {
+	width: 15rem;
+}
+
+#navlinks li ul li:hover {
+	background-color: #faf5f1;
+	display: block;
+}
+
+#navlinks li:hover ul {
+	display: block;
+}
+
+#logo {
+	font-size: 2rem;
+	line-height: 20px;
+}
+
+#sign-in,
+#signed-in {
+	margin-right: 100px;
+	padding: 20px 0;
+	font-size: 1.2rem;
+}

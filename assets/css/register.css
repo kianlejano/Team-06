@@ -1,164 +1,154 @@
-#registerContainerWrapper {
-	display: flex;
-	width: 100vw;
-	height: 100vh;
-	justify-content: center;
+body {
+	width: 90vw;
+	margin: 1rem auto;
+	font-family: "Montserrat";
 }
-#registerContainer {
-	background-color: #f5f5f5;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	width: 60vw;
+
+::placeholder {
+	font-family: "Montserrat";
+	font-size: 1em;
+}
+
+#header1 {
+	font-weight: 300;
+	color: #300109;
+}
+
+#container {
+	width: 80%;
 	height: 70vh;
-	padding: 5rem;
+	margin: 0 auto;
+	background-color: #f9f9f9;
+	padding: 2rem;
 	position: relative;
-}
-
-#formContent {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 }
 
-#registerLeft {
+#formContainer {
 	display: flex;
-	flex-wrap: wrap;
-	width: 45%;
-	margin-right: 1rem;
-}
-
-#registerRight {
-	display: flex;
-	flex-direction: column;
-	width: 45%;
-	flex-wrap: wrap;
-}
-
-#registerEmail {
-	flex-basis: 100%;
-}
-
-#registerName {
-	width: 48%;
-}
-
-#registerLastName {
-	width: 48%;
-}
-
-#registerNewPassword {
-	flex-basis: 100%;
-}
-
-#registerConfirmPassword {
-	flex-basis: 100%;
-}
-
-#registerLeft input,
-#registerRight input,
-#registerRight select,
-#registerRight label {
-	font-size: 1.5rem;
-	height: 2rem;
-	margin-bottom: 1rem;
-}
-
-#registerBirthday {
-	width: 20%;
-}
-
-#registerBirthyear {
-	width: 30%;
-}
-
-#registerNameSegment {
-	display: flex;
-	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
 	width: 100%;
 	justify-content: space-between;
 }
 
-#registerContact {
+#formLeft,
+#formRight {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+}
+
+#formEmail input,
+#formPassword input {
 	width: 100%;
 }
 
-#header {
-	font-family: "Montserrat";
-	font-weight: 400;
+#formName input {
+	width: 49%;
 }
 
-#registerContainer form button {
+#formName input,
+#formEmail input,
+#formPassword input,
+#formBirthday input,
+#formContact input,
+#formBirthday select,
+#formGender input {
+	margin: 0.4rem 0;
+	font-size: 1.2rem;
+	height: 2.5rem;
+}
+
+#formContact input {
+	width: 80%;
+}
+
+#formName {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#signUpButton {
+	background-color: #bd2039;
+	color: white;
+	border: none;
+	min-width: 15rem;
+	padding: 0.5rem;
+	margin: 2rem;
+	font-size: 1.7rem;
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	font-family: "Montserrat";
-	background-color: #bd2039;
-	color: #ffffff;
-	font-size: 2rem;
-	width: 12rem;
-	margin: 50px;
-	border: none;
 }
 
-body h1 {
-	font-family: "Montserrat";
-	font-weight: 400;
-}
-::placeholder {
-	font-family: "Montserrat";
-}
-
-#genderSegment {
-	display: flex;
-	flex-direction: column;
-}
-
-[type="radio"]:checked,
-[type="radio"]:not(:checked) {
-	position: absolute;
-	left: -9999px;
-}
-[type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label {
+/* Customize the label (the container) */
+.radioContainer {
+	display: block;
 	position: relative;
-	padding-left: 28px;
+	padding-left: 35px;
+	margin-bottom: 12px;
 	cursor: pointer;
-	line-height: 20px;
-	display: inline-block;
-	color: #666;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
-[type="radio"]:checked + label:before,
-[type="radio"]:not(:checked) + label:before {
-	content: "";
+
+/* Hide the browser's default checkbox */
+.radioContainer input {
 	position: absolute;
-	left: 0;
-	top: 0;
-	width: 18px;
-	height: 18px;
-	border: 1px solid #ddd;
-	border-radius: 100%;
-	background: #fff;
-}
-[type="radio"]:checked + label:after,
-[type="radio"]:not(:checked) + label:after {
-	content: "";
-	width: 12px;
-	height: 12px;
-	background: #bd2039;
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	border-radius: 100%;
-	-webkit-transition: all 0.2s ease;
-	transition: all 0.2s ease;
-}
-[type="radio"]:not(:checked) + label:after {
 	opacity: 0;
-	-webkit-transform: scale(0);
-	transform: scale(0);
+	cursor: pointer;
+	height: 0;
+	width: 0;
 }
-[type="radio"]:checked + label:after {
-	opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.radioContainer:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.radioContainer input:checked ~ .checkmark {
+	background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.radioContainer input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.radioContainer .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
