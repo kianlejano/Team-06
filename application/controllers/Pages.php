@@ -87,6 +87,7 @@ class Pages extends CI_Controller
         $data['css'] = "myaccount/myaccount.css";
         $data['title'] = "My account";
         $this->load->view('templates/header', $data);
+        $this->load->view('pages/myaccount/myaccount', $data);
     }
 
     public function editprofile()
@@ -94,6 +95,7 @@ class Pages extends CI_Controller
         $data['css'] = "myaccount/editprofile.css";
         $data['title'] = "Edit profile";
         $this->load->view('templates/header', $data);
+        $this->load->view('pages/myaccount/editprofile', $data);
     }
 
     public function changepassword()
@@ -101,6 +103,7 @@ class Pages extends CI_Controller
         $data['css'] = "myaccount/changepassword.css";
         $data['title'] = "Change password";
         $this->load->view('templates/header', $data);
+        $this->load->view('pages/myaccount/changepassword', $data);
     }
 
     public function createdforms()
@@ -108,5 +111,6 @@ class Pages extends CI_Controller
         $data['css'] = "myaccount/createdforms.css";
         $data['title'] = "Created forms";
         $this->load->view('templates/header', $data);
+        $this->load->view('pages/myaccount/createdforms', $data);
     }
 }
