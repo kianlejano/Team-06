@@ -100,7 +100,7 @@ class Pages extends CI_Controller
 
     public function changepassword()
     {
-        $data['css'] = "myaccount/changepassword.css";
+        $data['css'] = "myaccount/changepass.css";
         $data['title'] = "Change password";
         $this->load->view('templates/header', $data);
         $this->load->view('pages/myaccount/changepassword', $data);
